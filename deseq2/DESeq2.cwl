@@ -1,11 +1,11 @@
-#!/usr/bin/env r-3.3.2
+#!/usr/bin/env deseq2
 
 cwlVersion: v1.0
 
 class: CommandLineTool
 
 
-baseCommand: [Rscript, DESeq2.R]
+baseCommand: [Rscript, /home/bay001/projects/codebase/DESeq2/deseq2/DESeq2.R]
 
 inputs:
   counts:
@@ -34,18 +34,29 @@ inputs:
       position: 4
       prefix: --ref
     doc: "determines the base (numerator) condition"
+  alt:
+    type: string
+    inputBinding:
+      position: 5
+      prefix: --alt
+    doc: "determines the treatment (denominator) condition"
   col_skip:
     type: int
     default: 6
     inputBinding:
-      position: 5
+      position: 6
       prefix: --colSkip
     doc: "skip the first N columns (useful for featureCounts file)"
   column:
     type: string
     inputBinding:
-      position: 6
+      position: 7
       prefix: --column
+#   plot_pca:
+#     type: boolean
+#     inputBinding:
+#       position: 8
+#       prefix: --plotPCA
 
 arguments: [
   "--output",

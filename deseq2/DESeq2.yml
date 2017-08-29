@@ -16,7 +16,7 @@ filter_avg: 6
 # Perform DE with respect to base_ref (ie. geneA is upregulated
 # in 'knockout' with respect to 'wt' = positive fold change
 base_ref: wt
-
+alt: adr2
 # Number of columns to skip that are not expression counts.
 # In featureCounts outputs, there are typically 6 non-countable
 # columns. Default: 6
@@ -25,4 +25,3 @@ col_skip: 6
 # Given a table of associated sample->conditions, which
 # column should we use to contrast?
 column: sampletype
-
