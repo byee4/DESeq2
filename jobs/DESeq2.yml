@@ -3,12 +3,12 @@
 # a featureCounts output.
 counts:
   class: File
-  path: ../example_data/counts.txt
+  path: ../data/small/counts.txt
 
 # A file containing sample->conditions values
 conditions:
   class: File
-  path: ../example_data/conditions.txt
+  path: ../data/small/conditions.txt
 
 # Filters out average count
 filter_avg: 6
@@ -25,3 +25,5 @@ col_skip: 6
 # Given a table of associated sample->conditions, which
 # column should we use to contrast?
 column: sampletype
+
+plot_pca: true
